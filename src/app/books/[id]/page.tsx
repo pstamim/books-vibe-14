@@ -11,7 +11,7 @@ interface Iparamsprops {
 }
 
 const getbooks = async () => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksdata.json`)
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksdata.json`,{cache:'no-store'})
     const data = await res.json()
     return data
 }
